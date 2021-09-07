@@ -2,13 +2,13 @@
 	"name": "KQL script 1",
 	"properties": {
 		"content": {
-			"query": "\nkustobg4pool1db \n | project  ",
+			"query": "datatable('testaadkp') \n\n",
 			"metadata": {
 				"language": "kql"
 			},
 			"currentConnection": {
 				"poolName": "kustobg4pool1",
-				"databaseName": "kustobg4pool1db"
+				"databaseName": "testaadkp"
 			}
 		},
 		"type": "KqlQuery"
