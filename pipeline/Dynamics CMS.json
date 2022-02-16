@@ -1,0 +1,43 @@
+{
+	"name": "Dynamics CMS",
+	"properties": {
+		"activities": [
+			{
+				"name": "Pipeline_CMS_Dynamics_Lake",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "CMS_Dynamics_DataLakeV2_Pipeline",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Pipeline_CMS_Lake_SQLDW",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Pipeline_CMS_Dynamics_Lake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "CMS_DataLakeV2_SQLDW_Pipeline",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-11-26T07:23:49Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

@@ -1,0 +1,18 @@
+{
+	"name": "CMS_CustomerAddress_Dyn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DynamicsContactTracing",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Dynamics/CMS"
+		},
+		"annotations": [],
+		"type": "DynamicsEntity",
+		"typeProperties": {
+			"entityName": "customeraddress"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

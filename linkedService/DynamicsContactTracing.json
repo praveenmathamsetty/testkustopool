@@ -1,0 +1,28 @@
+{
+	"name": "DynamicsContactTracing",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"description": "Dynamics CRM Contact Tracing aka CTC CRM or CMS",
+		"annotations": [],
+		"type": "Dynamics",
+		"typeProperties": {
+			"deploymentType": "Online",
+			"serviceUri": "https://covid-hscni-uat.crm11.dynamics.com",
+			"authenticationType": "AADServicePrincipal",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalId": "e2cf27b4-c1b9-49ad-8a2e-cea3db50db04",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultSynapseDefault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "dynamics-ct-client-secret"
+			}
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

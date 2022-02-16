@@ -1,0 +1,18 @@
+{
+	"name": "AzureKeyVaultSynapseDefault",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"description": "The default Azure KeyVault for Synapse Analytics Workspace",
+		"parameters": {
+			"env": {
+				"type": "string",
+				"defaultValue": "uat"
+			}
+		},
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://phipco@{linkedService().env}.vault.azure.net/"
+		}
+	}
+}

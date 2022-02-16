@@ -1,0 +1,18 @@
+{
+	"name": "CMS_TestResultsContact_Dyn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DynamicsContactTracing",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Dynamics/CMS"
+		},
+		"annotations": [],
+		"type": "DynamicsEntity",
+		"typeProperties": {
+			"entityName": "new_new_testresults_contact"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

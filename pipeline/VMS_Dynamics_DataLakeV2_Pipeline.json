@@ -1,0 +1,100 @@
+{
+	"name": "VMS_Dynamics_DataLakeV2_Pipeline",
+	"properties": {
+		"description": "Run dataflow with Explicit copy to ingest copy source",
+		"activities": [
+			{
+				"name": "VMS_PatientVaccinationRecord_Ingest",
+				"description": "Ingest data from VMS PatientVaccinationRecord to Data Lake V2 storage",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DynamicsSource"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "VMS_PatientVaccinationRecord_Dyn",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "VMS_PatientVaccinationRecord_Lake",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "VMS_Contact_Ingest",
+				"description": "Ingest data from VMS Contact table to Data Lake V2 storage",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DynamicsSource"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "VMS_Contact_Dyn",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "VMS_Contact_Lake",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "VMS"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-11-26T07:23:52Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

@@ -1,0 +1,28 @@
+{
+	"name": "DynamicsVMS",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"description": "Dynamics CRM VMS Integration, aka Vaccine Management System",
+		"annotations": [],
+		"type": "Dynamics",
+		"typeProperties": {
+			"deploymentType": "Online",
+			"serviceUri": "https://hscnivacuat02.crm11.dynamics.com",
+			"authenticationType": "AADServicePrincipal",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalId": "4e60487f-5028-4e9b-8cf7-004c09b72e8a",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultSynapseDefault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "dynamics-vms-client-secret"
+			}
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

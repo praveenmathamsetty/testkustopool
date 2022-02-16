@@ -1,0 +1,20 @@
+{
+	"name": "CMS_Location_SQL",
+	"properties": {
+		"folder": {
+			"name": "SQLPool/CMS"
+		},
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CMS_Raw_Location"
+		},
+		"sqlPool": {
+			"referenceName": "exploredb",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

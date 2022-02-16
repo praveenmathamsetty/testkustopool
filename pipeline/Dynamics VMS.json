@@ -1,0 +1,43 @@
+{
+	"name": "Dynamics VMS",
+	"properties": {
+		"activities": [
+			{
+				"name": "Pipeline_VMS_Dynamics_Lake",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "VMS_Dynamics_DataLakeV2_Pipeline",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Pipeline_VMS_Lake_SQLDW",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Pipeline_VMS_Dynamics_Lake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "VMS_DataLakeV2_SQLDW_Pipeline",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-11-26T07:23:58Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

@@ -1,0 +1,18 @@
+{
+	"name": "CMS_CloseContact_Dyn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DynamicsContactTracing",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Dynamics/CMS"
+		},
+		"annotations": [],
+		"type": "DynamicsEntity",
+		"typeProperties": {
+			"entityName": "new_closecontact"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

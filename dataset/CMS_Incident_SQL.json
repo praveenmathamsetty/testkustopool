@@ -1,0 +1,20 @@
+{
+	"name": "CMS_Incident_SQL",
+	"properties": {
+		"folder": {
+			"name": "SQLPool/CMS"
+		},
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CMS_Raw_Incident"
+		},
+		"sqlPool": {
+			"referenceName": "exploredb",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

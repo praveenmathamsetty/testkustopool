@@ -1,0 +1,18 @@
+{
+	"name": "CMS_IncidentContact_Dyn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DynamicsContactTracing",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Dynamics/CMS"
+		},
+		"annotations": [],
+		"type": "DynamicsEntity",
+		"typeProperties": {
+			"entityName": "new_incident_contact"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

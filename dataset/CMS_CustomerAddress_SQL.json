@@ -1,0 +1,20 @@
+{
+	"name": "CMS_CustomerAddress_SQL",
+	"properties": {
+		"folder": {
+			"name": "SQLPool/CMS"
+		},
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CMS_Raw_CustomerAddress"
+		},
+		"sqlPool": {
+			"referenceName": "exploredb",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

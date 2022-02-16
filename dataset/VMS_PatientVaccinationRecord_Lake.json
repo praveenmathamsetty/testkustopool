@@ -1,0 +1,512 @@
+{
+	"name": "VMS_PatientVaccinationRecord_Lake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "testmyws-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "StagingLake/VMS"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{formatDateTime(utcnow(), 'yyyy/MM/dd/HH/')}PatientVaccinationRecord.csv",
+					"type": "Expression"
+				},
+				"folderPath": "vms",
+				"fileSystem": "hscstorphipdevuks01-dl-gen2-filesystem"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "createdby",
+				"type": "String"
+			},
+			{
+				"name": "createdbyname",
+				"type": "String"
+			},
+			{
+				"name": "createdbyyominame",
+				"type": "String"
+			},
+			{
+				"name": "createdon",
+				"type": "String"
+			},
+			{
+				"name": "createdonbehalfby",
+				"type": "String"
+			},
+			{
+				"name": "createdonbehalfbyname",
+				"type": "String"
+			},
+			{
+				"name": "createdonbehalfbyyominame",
+				"type": "String"
+			},
+			{
+				"name": "importsequencenumber",
+				"type": "String"
+			},
+			{
+				"name": "kns_addressline1",
+				"type": "String"
+			},
+			{
+				"name": "kns_addressline2",
+				"type": "String"
+			},
+			{
+				"name": "kns_allergies",
+				"type": "String"
+			},
+			{
+				"name": "kns_appointment",
+				"type": "String"
+			},
+			{
+				"name": "kns_appointmentid",
+				"type": "String"
+			},
+			{
+				"name": "kns_aptvisionid",
+				"type": "String"
+			},
+			{
+				"name": "kns_areyouorcouldyoubepregnantadvice",
+				"type": "String"
+			},
+			{
+				"name": "kns_areyouorcouldyoubepregnantconfirm",
+				"type": "String"
+			},
+			{
+				"name": "kns_batchnumber",
+				"type": "String"
+			},
+			{
+				"name": "kns_clinic",
+				"type": "String"
+			},
+			{
+				"name": "kns_clinicname",
+				"type": "String"
+			},
+			{
+				"name": "kns_consentgiveninpatientsbestinterest",
+				"type": "String"
+			},
+			{
+				"name": "kns_consentgiveninresidentsbestinterest",
+				"type": "String"
+			},
+			{
+				"name": "kns_covidpositiveinthelast28days",
+				"type": "String"
+			},
+			{
+				"name": "kns_currentbreastfeedingstatus",
+				"type": "String"
+			},
+			{
+				"name": "kns_dateofbirth",
+				"type": "String"
+			},
+			{
+				"name": "kns_dateofvaccination",
+				"type": "String"
+			},
+			{
+				"name": "kns_draft",
+				"type": "String"
+			},
+			{
+				"name": "kns_email",
+				"type": "String"
+			},
+			{
+				"name": "kns_ethnicbackground",
+				"type": "String"
+			},
+			{
+				"name": "kns_ethnicbackgroundother",
+				"type": "String"
+			},
+			{
+				"name": "kns_expirydate",
+				"type": "String"
+			},
+			{
+				"name": "kns_firstname",
+				"type": "String"
+			},
+			{
+				"name": "kns_gpadvice",
+				"type": "String"
+			},
+			{
+				"name": "kns_gpipstagingrecordid",
+				"type": "String"
+			},
+			{
+				"name": "kns_gpipstagingrecordidname",
+				"type": "String"
+			},
+			{
+				"name": "kns_gpmedicaladvicereceived",
+				"type": "String"
+			},
+			{
+				"name": "kns_hasthepatientgivenverbalconsent",
+				"type": "String"
+			},
+			{
+				"name": "kns_hcnumber",
+				"type": "String"
+			},
+			{
+				"name": "kns_historicalvaccinationrecordimpoid",
+				"type": "String"
+			},
+			{
+				"name": "kns_historicalvaccinationrecordimpoidname",
+				"type": "String"
+			},
+			{
+				"name": "kns_immediateadverseeventnoted",
+				"type": "String"
+			},
+			{
+				"name": "kns_immediateadverseeventnoteddetails",
+				"type": "String"
+			},
+			{
+				"name": "kns_indexmatchstatus",
+				"type": "String"
+			},
+			{
+				"name": "kns_jobtype",
+				"type": "String"
+			},
+			{
+				"name": "kns_jobtypeother",
+				"type": "String"
+			},
+			{
+				"name": "kns_lastname",
+				"type": "String"
+			},
+			{
+				"name": "kns_location",
+				"type": "String"
+			},
+			{
+				"name": "kns_locationname",
+				"type": "String"
+			},
+			{
+				"name": "kns_locationnamefield",
+				"type": "String"
+			},
+			{
+				"name": "kns_locationtype",
+				"type": "String"
+			},
+			{
+				"name": "kns_mandatoryverbalconsentgiven",
+				"type": "String"
+			},
+			{
+				"name": "kns_medicationreactionadvice",
+				"type": "String"
+			},
+			{
+				"name": "kns_medicationreactionconfirmation",
+				"type": "String"
+			},
+			{
+				"name": "kns_memberofatrust",
+				"type": "String"
+			},
+			{
+				"name": "kns_mobilenumber",
+				"type": "String"
+			},
+			{
+				"name": "kns_name",
+				"type": "String"
+			},
+			{
+				"name": "kns_nameofvaccinator",
+				"type": "String"
+			},
+			{
+				"name": "kns_nameofvaccine",
+				"type": "String"
+			},
+			{
+				"name": "kns_otherreasonnottovaccinate",
+				"type": "String"
+			},
+			{
+				"name": "kns_patient",
+				"type": "String"
+			},
+			{
+				"name": "kns_patientidentityverified",
+				"type": "String"
+			},
+			{
+				"name": "kns_patientname",
+				"type": "String"
+			},
+			{
+				"name": "kns_patientvaccinationrecordid",
+				"type": "String"
+			},
+			{
+				"name": "kns_patientyominame",
+				"type": "String"
+			},
+			{
+				"name": "kns_phonenumber",
+				"type": "String"
+			},
+			{
+				"name": "kns_postcode",
+				"type": "String"
+			},
+			{
+				"name": "kns_pregnancystatus",
+				"type": "String"
+			},
+			{
+				"name": "kns_proceedtovaccinate",
+				"type": "String"
+			},
+			{
+				"name": "kns_reasonforvaccination",
+				"type": "String"
+			},
+			{
+				"name": "kns_reasonifproceedtovaccinateisno",
+				"type": "String"
+			},
+			{
+				"name": "kns_requiredfieldsplaceholder",
+				"type": "String"
+			},
+			{
+				"name": "kns_rqiacode",
+				"type": "String"
+			},
+			{
+				"name": "kns_safetyquestions",
+				"type": "String"
+			},
+			{
+				"name": "kns_screeningcompleted",
+				"type": "String"
+			},
+			{
+				"name": "kns_seriousallergicreactiontoanyvaccine",
+				"type": "String"
+			},
+			{
+				"name": "kns_seriousreactiontoanyvaccine",
+				"type": "String"
+			},
+			{
+				"name": "kns_severereactiontofood",
+				"type": "String"
+			},
+			{
+				"name": "kns_severereactiontofoodadvice",
+				"type": "String"
+			},
+			{
+				"name": "kns_severereactiontofoodconfirmation",
+				"type": "String"
+			},
+			{
+				"name": "kns_sex",
+				"type": "String"
+			},
+			{
+				"name": "kns_significantreactiontoanymedicine",
+				"type": "String"
+			},
+			{
+				"name": "kns_siteofvaccine",
+				"type": "String"
+			},
+			{
+				"name": "kns_siteofvaccineother",
+				"type": "String"
+			},
+			{
+				"name": "kns_sourcesystem",
+				"type": "String"
+			},
+			{
+				"name": "kns_thepatienthasbeenvaccinated",
+				"type": "String"
+			},
+			{
+				"name": "kns_towncity",
+				"type": "String"
+			},
+			{
+				"name": "kns_trialofapotentialvaccine",
+				"type": "String"
+			},
+			{
+				"name": "kns_trialofapotentialvaccineconfirmation",
+				"type": "String"
+			},
+			{
+				"name": "kns_trust",
+				"type": "String"
+			},
+			{
+				"name": "kns_trustother",
+				"type": "String"
+			},
+			{
+				"name": "kns_truststaffnumber",
+				"type": "String"
+			},
+			{
+				"name": "kns_unabletobevaccinated",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccinationstatus",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccine",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccinedose",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccinedosetext",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccinename",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccinereactionadvice",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccinereactionconfirmation",
+				"type": "String"
+			},
+			{
+				"name": "kns_vaccinesinlastsevendays",
+				"type": "String"
+			},
+			{
+				"name": "kns_whoisthisrecordfor",
+				"type": "String"
+			},
+			{
+				"name": "modifiedby",
+				"type": "String"
+			},
+			{
+				"name": "modifiedbyname",
+				"type": "String"
+			},
+			{
+				"name": "modifiedbyyominame",
+				"type": "String"
+			},
+			{
+				"name": "modifiedon",
+				"type": "String"
+			},
+			{
+				"name": "modifiedonbehalfby",
+				"type": "String"
+			},
+			{
+				"name": "modifiedonbehalfbyname",
+				"type": "String"
+			},
+			{
+				"name": "modifiedonbehalfbyyominame",
+				"type": "String"
+			},
+			{
+				"name": "overriddencreatedon",
+				"type": "String"
+			},
+			{
+				"name": "ownerid",
+				"type": "String"
+			},
+			{
+				"name": "owneridname",
+				"type": "String"
+			},
+			{
+				"name": "owneridtype",
+				"type": "String"
+			},
+			{
+				"name": "owneridyominame",
+				"type": "String"
+			},
+			{
+				"name": "owningbusinessunit",
+				"type": "String"
+			},
+			{
+				"name": "owningteam",
+				"type": "String"
+			},
+			{
+				"name": "owninguser",
+				"type": "String"
+			},
+			{
+				"name": "statecode",
+				"type": "String"
+			},
+			{
+				"name": "statuscode",
+				"type": "String"
+			},
+			{
+				"name": "timezoneruleversionnumber",
+				"type": "String"
+			},
+			{
+				"name": "utcconversiontimezonecode",
+				"type": "String"
+			},
+			{
+				"name": "versionnumber",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

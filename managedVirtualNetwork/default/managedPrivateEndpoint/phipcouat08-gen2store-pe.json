@@ -1,0 +1,7 @@
+{
+	"name": "phipcouat08-gen2store-pe",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/ab01fc24-8cd6-4870-9dfe-cd3a73ccd8ed/resourceGroups/belrsg_hscni_uat_phip_uks_main_01/providers/Microsoft.Storage/storageAccounts/phipcouat",
+		"groupId": "dfs"
+	}
+}

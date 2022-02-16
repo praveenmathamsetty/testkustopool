@@ -1,0 +1,31 @@
+{
+	"name": "CMS_CloseContact_Lake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "testmyws-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "StagingLake/CMS"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{formatDateTime(utcnow(), 'yyyy/MM/dd/HH/')}CloseContact.csv",
+					"type": "Expression"
+				},
+				"folderPath": "cms",
+				"fileSystem": "hscstorphipdevuks01-dl-gen2-filesystem"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

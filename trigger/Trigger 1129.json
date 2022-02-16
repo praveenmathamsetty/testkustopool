@@ -1,0 +1,25 @@
+{
+	"name": "Trigger 1129",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Pipeline 1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 20,
+				"startTime": "2021-11-29T05:56:00",
+				"endTime": "2021-12-11T19:00:00",
+				"timeZone": "China Standard Time"
+			}
+		}
+	}
+}

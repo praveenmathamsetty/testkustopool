@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-custstgacct--testmyws-newpr",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/16620d54-d71c-4d22-910b-e711ca35efc6/resourceGroups/praveen-rg/providers/Microsoft.Storage/storageAccounts/newpr",
+		"groupId": "dfs",
+		"fqdns": [
+			"newpr.dfs.core.windows.net"
+		]
+	}
+}
